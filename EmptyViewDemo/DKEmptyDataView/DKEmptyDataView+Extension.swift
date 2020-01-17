@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension EmptyDataView {
+extension DKEmptyDataView {
     //MARK: - Data Source
     
     /// Asks the data source for the title of the dataset.

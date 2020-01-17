@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class EmptyDataView: UIView {
+public class DKEmptyDataView: UIView {
     
     internal lazy var contentView: UIView = {
         let contentView = UIView()

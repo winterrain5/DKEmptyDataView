@@ -15,9 +15,9 @@ private var kConfigureEmptyDataView =    "configureEmptyDataView"
 
 extension UIView {
     
-    private var configureEmptyDataView: ((EmptyDataView) -> Void)? {
+    private var configureEmptyDataView: ((DKEmptyDataView) -> Void)? {
         get {
-            return objc_getAssociatedObject(self, &kConfigureEmptyDataView) as? (EmptyDataView) -> Void
+            return objc_getAssociatedObject(self, &kConfigureEmptyDataView) as? (DKEmptyDataView) -> Void
         }
         set {
             objc_setAssociatedObject(self, &kConfigureEmptyDataView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -30,23 +30,23 @@ extension UIView {
     
     
     public var isEmptyDataVisible: Bool {
-        if let view = objc_getAssociatedObject(self, &kEmptyDataView) as? EmptyDataView {
+        if let view = objc_getAssociatedObject(self, &kEmptyDataView) as? DKEmptyDataView {
             return !view.isHidden
         }
         return false
     }
     
     //MARK: - privateProperty
-    public func emptyDataView(_ closure: @escaping (EmptyDataView) -> Void) {
+    public func emptyDataView(_ closure: @escaping (DKEmptyDataView) -> Void) {
         configureEmptyDataView = closure
     }
     
-    private var emptyDataView: EmptyDataView? {
+    private var emptyDataView: DKEmptyDataView? {
         get {
-            if let view = objc_getAssociatedObject(self, &kEmptyDataView) as? EmptyDataView {
+            if let view = objc_getAssociatedObject(self, &kEmptyDataView) as? DKEmptyDataView {
                 return view
             } else {
-                let view = EmptyDataView.init(frame: frame)
+                let view = DKEmptyDataView.init(frame: frame)
                 view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
                 view.isHidden = true
                 objc_setAssociatedObject(self, &kEmptyDataView, view, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)

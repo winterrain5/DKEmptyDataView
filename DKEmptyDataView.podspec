@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "EmptyDataView"
+  spec.name         = "DKEmptyDataView"
   spec.version      = "0.0.1"
   spec.summary      = "A empty placeholder view for all subclasses of UIView"
 
@@ -32,8 +32,8 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/winterrain5/EmptyDataView.git", :tag => "#{spec.version}" }
-  spec.homepage     = "https://github.com/winterrain5/EmptyDataView.git"
+  spec.source       = { :git => "https://github.com/winterrain5/DKEmptyDataView.git", :tag => "#{spec.version}" }
+  spec.homepage     = "https://github.com/winterrain5/DKEmptyDataView.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -87,7 +87,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "EmptyViewDemo/EmptyDataView/*.{swift}"
+  spec.source_files  = "EmptyViewDemo/DKEmptyDataView/*.{swift}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
