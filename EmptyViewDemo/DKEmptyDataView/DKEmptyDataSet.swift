@@ -104,7 +104,7 @@ extension UIView {
             
             if view.superview == nil {
                 // Send the view all the way to the back, in case a header and/or footer is present, as well as for sectionHeaders or any other content
-                if (self is UITableView) || (self is UICollectionView) || (subviews.count > 1) {
+                if (self is UITableView) || (self is UICollectionView) {
                     insertSubview(view, at: 0)
                 } else {
                     addSubview(view)

@@ -36,6 +36,7 @@ class ViewController: UIViewController {
             .image(UIImage(named: "placeholder_image"))
             .shouldFadeIn(true)
             .isScrollAllowed(self.shouldDisplay)
+                .dataSetBackgroundColor(.white)
         }
         
         let switchView = UISwitch()
